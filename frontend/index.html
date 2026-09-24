@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102c57" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="ST.IPS in Rajnagar, Azizpur, Agra. Learn with purpose and lead with confidence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ST.IPS" />
+    <meta property="og:title" content="ST.IPS · School in Agra" />
+    <meta property="og:description" content="ST.IPS in Rajnagar, Azizpur, Agra. Learn with purpose and lead with confidence." />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary" />
+    <title>ST.IPS | School in Rajnagar, Agra</title>
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('stips-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : (systemPrefersDark ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+      } catch {
+        document.documentElement.dataset.theme = 'light';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

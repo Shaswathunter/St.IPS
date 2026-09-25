@@ -5,12 +5,24 @@ import connectDB from "./config/db.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";
 import siteContentRoutes from "./routes/siteContentRoutes.js";
+import cors from "cors";
+
+
 
 dotenv.config();
 connectDB();
 
 const app = express();
 
+
+app.use(
+  cors({
+    origin: "https://stips-blue.vercel.app",
+    credentials: true,
+  })
+);
+
+app.use(express.json());
 const allowedOrigins = (process.env.FRONTEND_ORIGIN || "")
   .split(",")
   .map((origin) => origin.trim())
